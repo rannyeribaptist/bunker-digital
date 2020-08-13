@@ -1,0 +1,31 @@
+---
+layout: default
+title: Portfólio do Bunker
+---
+
+<div class="section section--bg-dark section--start">
+  <div class="section__content">
+
+    <h1 class="title title--black text-background text-background--yellow">Portfólio</h1>
+
+    <br>
+
+    <div class="columns">
+      {% for project in site.projects %}
+        <a href="{{ project.url }}">
+          <div class="column column--lg-3 column--md-2 column--sm-1">
+            <div class="portfolio-card">
+              <div class="portfolio-card__content">
+                <strong>{{ project.title }}</strong>
+              </div>
+              <img class="portfolio-card__background" src="{{ project.image }}" alt="">
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <br>
+
+  </div>
+</div>
