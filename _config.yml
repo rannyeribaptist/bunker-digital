@@ -24,29 +24,42 @@ description: >- # this means to ignore newlines until "baseurl:"
   Uma agência diferente de tudo que você já viu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bnkrdigital.com" # the base hostname & protocol for your site, e.g. http://example.com
+lang: pt-BR
 
 collections:
   services:
+    sidebar_label: serviços
   projects:
     output: true
+    sidebar_label: projetos
 
 defaults:
   - scope:
-    path: ""
-    type: "projects"
-  values:
-    link_path: ../
-    layout: project
+      path: ""
+      type: "projects"
+    values:
+      link_path: ../
+      layout: project
   - scope:
-    path: ""
-  values:
-    link_path: ./
-    layout: default
+      path: ""
+    values:
+      link_path: ./
+      layout: default
+      title: Bunker Digital - Agência criativa
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-admin
+
+ekyll_admin:
+  hidden_links:
+    - posts
+    - datafiles
+    - configuration
 
 # Exclude from processing.
 # The following items will not be processed, by default.

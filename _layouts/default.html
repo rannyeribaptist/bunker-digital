@@ -2,7 +2,6 @@
 <html lang="pt-BR" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }}</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/{{ page.link_path }}assets/css/styles.css">
@@ -29,15 +28,8 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#0c0c0c">
 
-  <!-- Sharing meta tags -->
-  <meta property="og:title" content="Bunker Digital">
-  <meta property="og:description" content="Uma agência diferente de tudo que você já viu">
-  <meta property="og:image" content="https://bnkrdigital.com/{{ page.link_path }}assets/images/icon.png">
-  <meta property="og:url" content="https://bnkrdigital.com">
-  <meta property="twitter:card" content="summary_large_image" />
-
-  <meta property="og:site_name" content="Bunker Digital" />
-  <meta name="twitter:image:alt" content="Bunker Digital Logo" />
+  {% feed_meta %}
+  {% seo %}
 </head>
 
 <body>
